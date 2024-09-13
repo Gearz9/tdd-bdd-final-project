@@ -101,6 +101,12 @@ class TestProductModel(unittest.TestCase):
         self.assertEqual(new_product.available, product.available)
         self.assertEqual(new_product.category, product.category)
 
+<<<<<<< HEAD
+=======
+    #
+    # ADD YOUR TEST CASES HERE
+    #
+>>>>>>> f51ea5947d673ce1c475750a3fbe54856f2069f2
     def test_read_a_product(self):
         """It should Read a Product"""
         product = ProductFactory()
@@ -114,7 +120,11 @@ class TestProductModel(unittest.TestCase):
         self.assertEqual(found_product.description, product.description)
         self.assertEqual(found_product.price, product.price)
 
+<<<<<<< HEAD
     def test_update_a_product(self):
+=======
+   def test_update_a_product(self):
+>>>>>>> f51ea5947d673ce1c475750a3fbe54856f2069f2
         """It should Update a Product"""
         product = ProductFactory()
         product.id = None
@@ -166,6 +176,10 @@ class TestProductModel(unittest.TestCase):
         for product in found:
             self.assertEqual(product.name, name)
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f51ea5947d673ce1c475750a3fbe54856f2069f2
     def test_find_by_availability(self):
         """It should Find Products by Availability"""
         products = ProductFactory.create_batch(10)

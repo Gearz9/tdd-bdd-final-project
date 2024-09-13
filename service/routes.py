@@ -136,7 +136,18 @@ def list_products():
 # PLACE YOUR CODE TO LIST ALL PRODUCTS HERE
 #
 
+<<<<<<< HEAD
 
+=======
+@app.route("/products", methods=["GET"])
+def list_products():
+    """Returns a list of Products"""
+    app.logger.info("Request to list Products...")
+    products = Product.all()
+    results = [product.serialize() for product in products]
+    app.logger.info("[%s] Products returned", len(results))
+    return results, status.HTTP_200_OK
+>>>>>>> f51ea5947d673ce1c475750a3fbe54856f2069f2
 
 ######################################################################
 # R E A D   A   P R O D U C T
@@ -202,4 +213,8 @@ def delete_products(product_id):
     product = Product.find(product_id)
     if product:
         product.delete()
+<<<<<<< HEAD
     return "", status.HTTP_204_NO_CONTENT
+=======
+    return "", status.HTTP_204_NO_CONTENT
+>>>>>>> f51ea5947d673ce1c475750a3fbe54856f2069f2
